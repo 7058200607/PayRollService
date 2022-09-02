@@ -17,3 +17,9 @@ select empname from payroll_service where start_date between '2019-01-01' and GE
 alter table payroll_service add gender char;
 update payroll_service set gender='m' where empname='Bill' or empname='charlie';
 update payroll_service set gender ='f' where empname='Terisa'
+--UC7 calculate the sum,avg, min and max of employee
+select gender,sum(salary) from payroll_service group by gender;
+select gender,avg(salary) from payroll_service group by gender;
+select gender,min(salary) from payroll_service group by gender;
+select gender,max(salary) from payroll_service group by gender;
+select gender,count(salary) from payroll_service group by gender;
