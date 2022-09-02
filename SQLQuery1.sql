@@ -23,3 +23,7 @@ select gender,avg(salary) from payroll_service group by gender;
 select gender,min(salary) from payroll_service group by gender;
 select gender,max(salary) from payroll_service group by gender;
 select gender,count(salary) from payroll_service group by gender;
+--UC8 extend database and add coloumn phone number,address and department
+alter table payroll_service add phone_number varchar(15);
+alter table payroll_service add address varchar(100) default'US' not null;
+alter table payroll_service add department varchar(100) default'CS' not null;
