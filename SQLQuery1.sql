@@ -33,3 +33,6 @@ alter table payroll_service add Deduction money;
 alter table payroll_service add Income_Tax money;
 alter table payroll_service add Net_Pay money;
 select*from payroll_service;
+--UC10 ability to make Terisa as part od sales and marketing department.
+insert into payroll_service(empname,salary,start_date,phone_number,address,department) values('terisa',3000000,'2017-12-23',null,'US','sales');
+select*from payroll_service;
