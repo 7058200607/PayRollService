@@ -27,3 +27,9 @@ select gender,count(salary) from payroll_service group by gender;
 alter table payroll_service add phone_number varchar(15);
 alter table payroll_service add address varchar(100) default'US' not null;
 alter table payroll_service add department varchar(100) default'CS' not null;
+--UC9 Ability to extend table to add basic pay,deduction, taxble pay,income tax,net pay.
+alter table payroll_service add Basic_Pay money;
+alter table payroll_service add Deduction money;
+alter table payroll_service add Income_Tax money;
+alter table payroll_service add Net_Pay money;
+select*from payroll_service;
